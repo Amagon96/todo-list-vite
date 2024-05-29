@@ -24,7 +24,7 @@ export const TodoTitle = ({ id, title, completed, editTitle }) => {
             onChange={(e) => setNewTitle(e.target.value)}
           />
         </form>
-        <IconButton onClick={() => activeEditMode(prevState => !prevState)}>
+        <IconButton role='edit-button' onClick={() => activeEditMode(prevState => !prevState)}>
           <CheckIcon className='todo-button' />
         </IconButton>
       </>
@@ -37,7 +37,7 @@ export const TodoTitle = ({ id, title, completed, editTitle }) => {
         >
           {title}
         </label>
-        <IconButton onClick={() => activeEditMode(prevState => !prevState)}>
+        <IconButton role='edit-button' onClick={() => activeEditMode(prevState => !prevState)}>
           <EditIcon className='todo-button' />
         </IconButton>
       </>

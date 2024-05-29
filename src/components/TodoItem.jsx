@@ -13,7 +13,7 @@ export const TodoItem = ({ id, title, completed, removeTodo, toggleTodo, editTit
   }
 
   return (
-    <div className="todo-item">
+    <div className="todo-item" data-testid="todo-item">
       <input 
         className="completed-toggle"
         checked={completed}

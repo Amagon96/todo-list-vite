@@ -4,7 +4,7 @@ import { TodoItem } from './TodoItem';
 export const TodoList = ({ todos, removeTodo, toggleTodo, editTitle }) => {
 
   return(
-    <div className='todos'>
+    <div className='todos' data-testid="todo-list">
       {todos.map(todo => (
         <TodoItem
           key={todo.id}
