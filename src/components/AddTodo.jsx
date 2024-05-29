@@ -1,18 +1,18 @@
-import { useState } from "react";
+import PropTypes from 'prop-types'
+import { useState } from "react"
 
-export const CreateTodo = ({ saveTodo }) => {
+export const AddTodo = ({ saveTodo }) => {
 
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
     saveTodo(title)
-    console.log(title)
     setTitle('');
   }
   
   return (
-    <div>
+    <div className="create-todo-input">
       <form onSubmit={handleSubmit}>
         <input 
           className="todo-input"
@@ -23,4 +23,8 @@ export const CreateTodo = ({ saveTodo }) => {
       </form>
     </div>
   )
+}
+
+AddTodo.propTypes = {
+  saveTodo: PropTypes.func.isRequired
 }

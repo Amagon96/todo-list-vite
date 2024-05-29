@@ -1,42 +1,91 @@
 #root {
   max-width: 1280px;
+  min-width: 100vh;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #d4d8de;
+  top: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input {
+  border-radius: 9px;
+  font-size:20px;
+  width: 100%;
+  height: 40px;
+  border-style: none;
+  outline: none;
+  color: #A18AFF;
+  margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.todos {
+  width: 100%;
 }
 
-.card {
-  padding: 2em;
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 9px;
+  color: #A18AFF;
+  background-color: white;
+  margin: 5px 0;
 }
 
-.read-the-docs {
-  color: #888;
+.todo-title {
+  width: 80%;
+  text-align: start;
+}
+
+.todo-title-completed {
+  width: 80%;
+  text-align: start;
+  text-decoration: line-through;
+}
+
+.completed-toggle {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.completed-toggle:checked {
+  background-color: #A18AFF;
+}
+
+.todo-button {
+  color: #A18AFF; 
+}
+
+.edit-form {
+  border-radius: 9px;
+  width: 80%;
+  border-style: none;
+  outline: none;
+  color: #A18AFF;
+  margin: 5px 0;
+}
+
+.edit-input {
+  width: 100%;
+  text-align: start;
+  outline: none;
+  color: #A18AFF;
+  border-style: none;
+  font-size: 20px;
 }
